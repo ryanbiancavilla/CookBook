@@ -1,0 +1,24 @@
+{% extends "base.html" %} {% block title %}Cook Book{% endblock %} {% block content
+    %}
+    <h1 class="display-3" align="center">CookBook</h1>
+    <p class="lead" align="center">
+        Add or Delete Recipes to Your CookBook!
+      </p>
+    <ul class="list-group" id="notes">
+      {% for note in user.notes %}
+      <li class="list-group-item">
+        {{ note.data }}
+        <button type="button" class="close" onClick="deleteNote({{ note.id }})">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </li>
+      {% endfor %}
+    </ul>
+    <form method="POST">
+      <textarea name="note" id="note" class="form-control"></textarea>
+      <br />
+      <div align="center">
+        <button type="submit" class="btn btn-primary">Add Recipe</button>
+      </div>
+    </form>
+    {% endblock %}

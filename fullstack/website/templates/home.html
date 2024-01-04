@@ -1,0 +1,24 @@
+{% extends "base.html" %} {% block title %}Home{% endblock %} {% block content
+    %}
+    <br />
+    <h1 class="display-1" align="center">Welcome to CookBook</h1>
+    <br />
+    <h1 class="display-5" align="center">Discover the joy of effortless recipe management!</h1>
+    <p class="lead" align="center">
+      CookBook provides you with the simplest way to store and organize all your favorite recipes 
+      in one safe and convenient place. Whether you're a culinary enthusiast or just getting started 
+      in the kitchen, our user-friendly platform makes managing your recipes a breeze.
+      </p>
+    <form method="POST">
+      <br />
+      <div align="center">
+        <a href="/sign-up" class="btn btn-primary">Sign Up</a>
+      </div>
+    </form>
+    <form method="POST">
+        <br />
+        <div align="center">
+          <a href="/login" class="btn btn-primary">Log In</a>
+        </div>
+      </form>
+    {% endblock %}
